@@ -245,8 +245,9 @@
     /* ── Footer ── */
     footer{padding:64px 0 24px;background:#151c29;color:#fff}
     .footer-avatar{width:72px;height:72px;border-radius:8px;background:url('Personal%20Brand%20-%20Landing%20Page%20Assets/Michael%20Apollo%20Hero%20Image%20-%20Top%20Part%20of%20Landing%20Page.jpg') center 15%/cover;flex-shrink:0}
-    .footer-brand{margin-top:18px;font-family:"Source Serif 4",Georgia,serif;font-size:1.2rem;font-weight:400}
-    .footer-desc{max-width:340px;margin-top:8px;color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.5}
+    .footer-identity{display:flex;align-items:center;gap:16px}
+    .footer-brand{font-family:"Source Serif 4",Georgia,serif;font-size:1.2rem;font-weight:400}
+    .footer-desc{max-width:340px;margin-top:4px;color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.5}
     .footer-main{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:40px}
     .footer-col h4{margin:0 0 14px;font-size:.78rem;font-weight:600;letter-spacing:0;text-transform:none;color:rgba(255,255,255,.4)}
     .footer-col a{display:flex;align-items:center;gap:6px;margin:7px 0;color:rgba(255,255,255,.6);font-size:.88rem;transition:.1s}
@@ -620,9 +621,13 @@
 
 <footer>
   <div class="container">
-    <div class="footer-avatar"></div>
-    <div class="footer-brand">Michael Apollo</div>
-    <p class="footer-desc">Ideas for leaders navigating change, complexity, and the future of work.</p>
+    <div class="footer-identity">
+      <div class="footer-avatar"></div>
+      <div>
+        <div class="footer-brand">Michael Apollo</div>
+        <p class="footer-desc">Ideas for leaders navigating change, complexity, and the future of work.</p>
+      </div>
+    </div>
     <div class="footer-main">
       <div class="footer-col"><h4>Explore</h4><a href="#impact">Impact</a><a href="#podcast">Podcast</a><a href="#speaking">Speaking</a><a href="#organizations">For Organizations</a><a href="#about">About</a></div>
       <div class="footer-col"><h4>Connect</h4><a href="https://www.linkedin.com/in/michaelapollo/">LinkedIn</a><a href="https://www.youtube.com/@MichaelApollo">YouTube</a><a href="https://podcasts.apple.com/ca/podcast/leading-minds-revealed/id1814616204">Apple Podcasts</a><a href="https://open.spotify.com/show/4OF88HI4msWJgrWqIMasp2">Spotify</a></div>
