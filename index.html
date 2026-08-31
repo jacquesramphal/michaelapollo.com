@@ -68,7 +68,7 @@
     .highlight{background-image:linear-gradient(transparent 60%,rgba(189,108,84,.15) 60%,rgba(189,108,84,.15) 90%,transparent 90%);padding:0 .08em}
 
     /* ── Buttons ── */
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border:1px solid transparent;font-weight:600;font-size:.88rem;transition:.15s ease;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:0 22px;border:1px solid transparent;font-weight:600;font-size:.88rem;transition:.15s ease;cursor:pointer}
     .btn-primary{background:var(--cta);color:var(--white);border-radius:999px}
     .btn-primary:hover{background:#1a2130}
     .btn-secondary{border-color:var(--line);background:transparent;border-radius:6px}
@@ -97,15 +97,14 @@
     @media(max-width:620px){.deco{display:none}}
 
     /* ── Hero ── */
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:64px 0;background:var(--paper);overflow:hidden}
+    .hero{position:relative;min-height:calc(100vh - 140px);display:flex;align-items:center;padding:64px 0;background:var(--paper);overflow:hidden}
     .hero-bg{position:absolute;top:0;right:0;width:55%;height:100%;background:url('Personal%20Brand%20-%20Landing%20Page%20Assets/Michael%20Apollo%20Hero%20Image%20-%20Top%20Part%20of%20Landing%20Page.jpg') center 10%/cover;z-index:1}
     .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--paper) 0%,rgba(251,250,247,.4) 22%,transparent 42%)}
     .hero-content{position:relative;z-index:2;width:min(calc(100% - 80px),var(--max));margin:0 auto}
     .hero-content h1,.hero-content .lead,.hero-content .hero-actions,.hero-content .hero-meta{max-width:55%}
     .hero-content .lead{margin-top:32px}
     .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px}
-    .hero-meta{display:flex;gap:20px;margin-top:40px;font-size:.88rem;color:var(--muted)}
-    @media(max-width:900px){.hero-meta{display:none}}
+    /* hero-meta removed */
     .hero-portrait-mobile{display:none}
 
     /* ── Credibility ── */
@@ -181,9 +180,11 @@
     .featured-ep .btn-secondary{border-color:rgba(255,255,255,.3);color:#fff;border-radius:999px}
     /* Stacked episode cards */
     .ep-stack{display:flex;flex-direction:column;gap:14px}
-    .ep-card{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:22px 24px;background:var(--ink-2);border-radius:6px;transition:.2s;cursor:pointer;color:#fff}
+    .ep-card{display:grid;grid-template-columns:auto 1fr;gap:0;align-items:stretch;background:var(--ink-2);border-radius:6px;transition:.2s;cursor:pointer;color:#fff;overflow:hidden}
     .ep-card:hover{background:#293a4d}
-    .ep-card .ep-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.12);flex-shrink:0}
+    .ep-card .ep-thumb{width:100px;min-height:100%;object-fit:cover;flex-shrink:0}
+    .ep-card .ep-avatar{display:none}
+    .ep-card-body{padding:18px 20px}
     .ep-card-body .tag{font-size:.72rem;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.6)}
     .ep-card-body h3{margin:4px 0;font-size:1.05rem;line-height:1.25;color:#fff}
     .ep-card-body p{color:rgba(255,255,255,.7);font-size:.85rem;line-height:1.5}
@@ -338,8 +339,8 @@
       .featured-ep-body h3{font-size:1.3rem}
       .featured-ep-body .ep-actions{flex-direction:column}
       .featured-ep-body .ep-actions .btn{width:100%;text-align:center}
-      .ep-card{grid-template-columns:36px 1fr;gap:12px;padding:16px}
-      .ep-card .ep-avatar{width:36px;height:36px}
+      .ep-card .ep-thumb{width:80px}
+      .ep-card-body{padding:14px 16px}
       .speaking-visual{margin-bottom:20px}
       .speaking-img{min-height:200px}
       .testimonial{margin-left:8px;margin-right:8px;padding:14px 16px;font-size:.85rem}
@@ -398,9 +399,7 @@
         <a class="btn btn-primary" href="#speaking">Work with Michael</a>
         <a class="text-link" href="#podcast">Listen to the Podcast &rarr;</a>
       </div>
-      <div class="hero-meta">
-        <span>Podcast host</span><span>Executive speaker</span><span>Founder &amp; advisor</span>
-      </div>
+      <!-- hero-meta removed per Michael's feedback — redundant with content below -->
       <div class="hero-portrait-mobile" role="img" aria-label="Michael Apollo"></div>
     </div>
   </section>
@@ -504,15 +503,15 @@
             <h3>The Leadership Advantage of Empathy</h3>
             <p>Empathy is not simply a leadership style, but a practical advantage for building trust, strengthening performance, and leading people through change.</p>
             <div class="ep-actions">
-              <a class="btn btn-primary" href="https://open.spotify.com/episode/2vWWQhOcqF0THCeAKRQJGU?si=ZXy13INQSQ6FqcPfAvXauA">Listen</a>
-              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=t1aZ5nZVJ6o&t=3s">Watch</a>
+              <a class="btn btn-primary" href="https://open.spotify.com/episode/2vWWQhOcqF0THCeAKRQJGU?si=ZXy13INQSQ6FqcPfAvXauA"><i class="fa-solid fa-headphones"></i> Listen</a>
+              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=t1aZ5nZVJ6o&t=3s"><i class="fa-solid fa-play"></i> Watch</a>
             </div>
           </div>
         </article>
         <!-- Recent episodes — stacked right -->
         <div class="ep-stack">
           <article class="ep-card">
-            <img class="ep-avatar" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Vincenzo%20Ciampi%20Headshot.webp" alt="Vincenzo Ciampi" loading="lazy">
+            <img class="ep-thumb" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Vincenzo%20Ciampi%20Headshot.webp" alt="Vincenzo Ciampi" loading="lazy">
             <div class="ep-card-body">
               <div class="tag">Recent</div>
               <h3>Lead People Through AI Change</h3>
@@ -520,7 +519,7 @@
             </div>
           </article>
           <article class="ep-card">
-            <img class="ep-avatar" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Nat%20Ku%20Headshot.png" alt="Natalie Ku" loading="lazy">
+            <img class="ep-thumb" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Nat%20Ku%20Headshot.png" alt="Natalie Ku" loading="lazy">
             <div class="ep-card-body">
               <div class="tag">Recent</div>
               <h3>Human-First Leadership at Scale: Culture, AI, and Growth</h3>
@@ -528,7 +527,7 @@
             </div>
           </article>
           <article class="ep-card">
-            <img class="ep-avatar" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Jordan%20Redshaw%20Headshot.png" alt="Jordan Redshaw" loading="lazy">
+            <img class="ep-thumb" src="Personal%20Brand%20-%20Landing%20Page%20Assets/Jordan%20Redshaw%20Headshot.png" alt="Jordan Redshaw" loading="lazy">
             <div class="ep-card-body">
               <div class="tag">Recent</div>
               <h3>Leading Through Urgency Without Panic</h3>
